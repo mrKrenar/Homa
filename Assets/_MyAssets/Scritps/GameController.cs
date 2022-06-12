@@ -13,6 +13,8 @@ public class GameController : MonoSingleton<GameController>
 
     [SerializeField] GameObject fpsCounterWindow;
 
+    [SerializeField] Transform moneyLevelStart;
+
     [SerializeField] PortalData[] portalChoices;
 
 
@@ -77,6 +79,8 @@ public class GameController : MonoSingleton<GameController>
     // Start is called before the first frame update
     void Start()
     {
+        moneyLevelStart.GetChild(Random.Range(0, moneyLevelStart.childCount)).gameObject.SetActive(true);
+
         UiManager.Instance.SetLevelText(CurrentLevel);
 
         PortalData tmp;

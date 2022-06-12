@@ -17,9 +17,8 @@ public class CollectablesStack : MonoBehaviour
         stack.Add(go);
         go.transform.parent = stackHolder;
 
-        Vector3 targetPosition = stackHolder.transform.localPosition + Vector3.up * lastElementYPostion;
-
-        go.transform.DOLocalMove(stackHolder.transform.localPosition + Vector3.up * lastElementYPostion, .25f);
+        go.transform.DOLocalMove(stackHolder.transform.localPosition + Vector3.up * lastElementYPostion, .5f)
+            .SetEase(Ease.OutBack);
 
         lastElementYPostion += distanceBetweenElements;
     }
