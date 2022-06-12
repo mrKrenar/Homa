@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectMoneyDistance: 1.5
+  moveSpeed: 5
+  groundWidth: 4.5
 --- !u!65 &5901456834212981970
 BoxCollider:
   m_ObjectHideFlags: 0

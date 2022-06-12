@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
         startPosition = transform.position;
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         if (ignoreFollowing)
         {

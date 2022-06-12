@@ -7,6 +7,24 @@ public class GameController : MonoSingleton<GameController>
     [SerializeField] Portal portalPrefab;
     [SerializeField] Sprite testSprite;
 
+    bool gameStarted;
+    public bool GameStarted
+    {
+        get
+        {
+            return gameStarted;
+        }
+        set
+        {
+            gameStarted = value;
+            MainCharacterController.Instance.GameStarted = gameStarted;
+            if (gameStarted)
+            {
+                CharacterAnimationController.Instance.SetAnimation(CharacterAnimationType.running);
+            }
+        }
+    }
+
     private void Awake()
     {
         Application.targetFrameRate = Screen.currentResolution.refreshRate;
@@ -23,11 +41,5 @@ public class GameController : MonoSingleton<GameController>
                 null, testSprite,
                 "party", "");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
