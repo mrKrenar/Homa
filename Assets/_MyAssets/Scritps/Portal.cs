@@ -22,7 +22,7 @@ public class Portal : MonoBehaviour
             option0.ignoreTrigger = true;
             option1.ignoreTrigger = true;
 
-            option0Img.transform.DOScale(1.5f, .3f).SetEase(Ease.OutQuad);
+            option0Img.transform.DOScale(1.3f, .3f).SetEase(Ease.OutQuad);
             option0Img.DOFade(0, .1f).SetDelay(.2f);
         };
 
@@ -30,7 +30,7 @@ public class Portal : MonoBehaviour
             option0.ignoreTrigger = true;
             option1.ignoreTrigger = true;
 
-            option1Img.transform.DOScale(1.5f, .3f).SetEase(Ease.OutQuad);
+            option1Img.transform.DOScale(1.3f, .3f).SetEase(Ease.OutQuad);
             option1Img.DOFade(0, .1f).SetDelay(.2f);
         };
 
