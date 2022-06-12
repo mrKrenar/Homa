@@ -17,11 +17,6 @@ public class CharacterAnimationController : MonoSingleton<CharacterAnimationCont
 
     public void SetAnimation(CharacterAnimationType animationType)
     {
-        if (animator == null)
-        {
-            return;
-        }
-
         switch (animationType)
         {
             case CharacterAnimationType.idle:

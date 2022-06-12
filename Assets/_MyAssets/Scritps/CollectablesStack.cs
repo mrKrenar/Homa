@@ -7,7 +7,7 @@ public class CollectablesStack : MonoBehaviour
     [SerializeField] Transform stackHolder;
 
     float lastElementYPostion;
-    float distanceBetweenElements = 0.03f;
+    float distanceBetweenElements = 0.05f;
 
     List<GameObject> stack = new List<GameObject>();
 
@@ -26,6 +26,7 @@ public class CollectablesStack : MonoBehaviour
         {
             var element = stack[stack.Count - 1];
             element.AddComponent<Rigidbody>().AddForce(Random.Range(-3f, 3f), Random.Range(5f, 7f), 0, ForceMode.VelocityChange);
+            element.transform.parent = null;
             Destroy(element, 5f);
             stack.RemoveAt(stack.Count - 1);
         }
@@ -36,7 +37,10 @@ public class CollectablesStack : MonoBehaviour
         foreach (var item in stack)
         {
             item.AddComponent<BoxCollider>();
-            item.AddComponent<Rigidbody>().AddForce(Random.Range(-.5f, .5f), Random.Range(2f, 3f), Random.Range(4f, 5f), ForceMode.VelocityChange);
+            item.AddComponent<Rigidbody>().AddForce(item.transform.forward + new Vector3 (Random.Range(-.5f, .5f), Random.Range(2f, 3f), Random.Range(4f, 5f)), ForceMode.VelocityChange);
+            item.transform.parent = null;
         }
+
+        stack.Clear();
     }
 }

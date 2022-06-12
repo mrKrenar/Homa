@@ -74,13 +74,12 @@ public class UiManager : MonoSingleton<UiManager>
         }
     }
 
-
     public void SetWonReason()
     {
         mainMenuCanvas.SetActive(false);
 
         finishedCanvasWon.SetActive(true);
 
-        dieReasonText.text = wonReasons[Random.Range(0, wonReasons.Length)];
+        wonReasonText.text = wonReasons[Random.Range(0, wonReasons.Length)];
     }
 }
