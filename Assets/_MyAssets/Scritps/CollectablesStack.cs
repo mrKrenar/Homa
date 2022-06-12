@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CollectablesStack : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class CollectablesStack : MonoBehaviour
     {
         stack.Add(go);
         go.transform.parent = stackHolder;
-        go.transform.position = stackHolder.transform.position + Vector3.up * lastElementYPostion;
+
+        Vector3 targetPosition = stackHolder.transform.localPosition + Vector3.up * lastElementYPostion;
+
+        go.transform.DOLocalMove(stackHolder.transform.localPosition + Vector3.up * lastElementYPostion, .25f);
 
         lastElementYPostion += distanceBetweenElements;
     }
@@ -29,11 +33,15 @@ public class CollectablesStack : MonoBehaviour
             element.transform.parent = null;
             Destroy(element, 5f);
             stack.RemoveAt(stack.Count - 1);
+
+            lastElementYPostion -= distanceBetweenElements;
         }
     }
 
     public void DropStack()
     {
+        lastElementYPostion -= distanceBetweenElements * stack.Count;
+
         foreach (var item in stack)
         {
             item.AddComponent<BoxCollider>();

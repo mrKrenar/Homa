@@ -13,8 +13,6 @@ public class TriggerDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigger option: " + other.gameObject.name, other.gameObject);
-
         if (ignoreTrigger)
         {
             return;

@@ -68,6 +68,8 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
 
         CameraController.Instance.ignoreFollowing = true;
 
+        Destroy(GetComponent<Collider>());
+
         transform.DOMove(new Vector3(0, 0, transform.position.z + 3), 1)
             .OnComplete(() =>
             {
