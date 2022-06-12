@@ -20,8 +20,11 @@ public class CollectablesStack : MonoBehaviour
         stack.Add(go);
         go.transform.parent = stackHolder;
 
-        go.transform.DOLocalMove(stackHolder.transform.localPosition + Vector3.up * lastElementYPostion, .5f)
+        go.transform
+            .DOLocalMove(stackHolder.transform.localPosition + Vector3.up * lastElementYPostion, .5f)
             .SetEase(Ease.OutBack);
+
+        go.transform.DOLocalRotateQuaternion(moneyPrefab.transform.rotation, .5f);
 
         lastElementYPostion += distanceBetweenElements;
     }
