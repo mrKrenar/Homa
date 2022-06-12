@@ -7,6 +7,8 @@ public class GameController : MonoSingleton<GameController>
     [SerializeField] Portal portalPrefab;
     [SerializeField] Sprite testSprite;
 
+    [SerializeField] GameObject fpsCounterWindow;
+
     bool gameStarted;
     public bool GameStarted
     {
@@ -21,6 +23,7 @@ public class GameController : MonoSingleton<GameController>
             if (gameStarted)
             {
                 CharacterAnimationController.Instance.SetAnimation(CharacterAnimationType.running);
+                UiManager.Instance.EnableCanvas(1);
             }
         }
     }
@@ -41,5 +44,10 @@ public class GameController : MonoSingleton<GameController>
                 null, testSprite,
                 "party", "");
         }
+    }
+
+    public void ToggleFpsCounterWindow()
+    {
+        fpsCounterWindow.SetActive(!fpsCounterWindow.activeSelf);
     }
 }
