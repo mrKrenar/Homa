@@ -24678,11 +24678,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2356229197005850975, guid: f4c66a9020bfc1142819a05b8fc1ec00,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2356229197005850975, guid: f4c66a9020bfc1142819a05b8fc1ec00,
-        type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -24743,23 +24738,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7363512488878141108, guid: f4c66a9020bfc1142819a05b8fc1ec00,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7363512488878141108, guid: f4c66a9020bfc1142819a05b8fc1ec00,
-        type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9212485174401973934, guid: f4c66a9020bfc1142819a05b8fc1ec00,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9217211789787338729, guid: f4c66a9020bfc1142819a05b8fc1ec00,
-        type: 3}
-      propertyPath: collectMoneyDistance
-      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4c66a9020bfc1142819a05b8fc1ec00, type: 3}

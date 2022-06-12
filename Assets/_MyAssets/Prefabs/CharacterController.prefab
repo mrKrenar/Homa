@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df07a17239e62e143a95af0630fe4a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectMoneyDistance: 1.5
+  collectMoneyDistance: 0.7
   moveSpeed: 5
   groundWidth: 4.5
   collectablesStack: {fileID: 7868256785921526073}
@@ -330,6 +330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackHolder: {fileID: 387221218280725176}
+  moneyPrefab: {fileID: 1935172865356699236, guid: 2950957660fad284489c2baea1931b22,
+    type: 3}
 --- !u!1 &2722042134347646452
 GameObject:
   m_ObjectHideFlags: 0

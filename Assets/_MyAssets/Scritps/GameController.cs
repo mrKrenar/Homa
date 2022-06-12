@@ -105,6 +105,8 @@ public class GameController : MonoSingleton<GameController>
 
                     MainCharacterUI.Instance.UpdateHealthSlider(-tmp.healthChange);
                     MainCharacterUI.Instance.UpdateWealthSlider(tmp.healthChange);
+
+                    MainCharacterController.Instance.collectablesStack.ProduceInStack(5);
                 },
                 tmp.healthSprite,
                 tmp.wealthSprite,

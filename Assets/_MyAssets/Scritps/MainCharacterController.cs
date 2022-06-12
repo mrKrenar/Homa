@@ -49,8 +49,6 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
                     if (item.CompareTag("Money"))
                     {
                         collectablesStack.AddToStack(item.gameObject);
-
-                        Destroy(item);
                     }
                     else if (item.CompareTag("Finish"))
                     {

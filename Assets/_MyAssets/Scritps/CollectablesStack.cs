@@ -6,6 +6,7 @@ using DG.Tweening;
 public class CollectablesStack : MonoBehaviour
 {
     [SerializeField] Transform stackHolder;
+    [SerializeField] GameObject moneyPrefab;
 
     float lastElementYPostion;
     float distanceBetweenElements = 0.05f;
@@ -14,6 +15,8 @@ public class CollectablesStack : MonoBehaviour
 
     public void AddToStack(GameObject go)
     {
+        Destroy(go.GetComponent<Collider>());
+
         stack.Add(go);
         go.transform.parent = stackHolder;
 
@@ -65,5 +68,23 @@ public class CollectablesStack : MonoBehaviour
         }
 
         stack.Clear();
+    }
+
+    public void ProduceInStack(int amount)
+    {
+        StartCoroutine(ProduceAndAdd());
+
+        IEnumerator ProduceAndAdd()
+        {
+            var delay = new WaitForSeconds(.1f);
+
+            for (int i = 0; i < amount; i++)
+            {
+                Instantiate(moneyPrefab, transform.position, moneyPrefab.transform.rotation);
+                
+                yield return delay;
+            }
+        }
+
     }
 }
