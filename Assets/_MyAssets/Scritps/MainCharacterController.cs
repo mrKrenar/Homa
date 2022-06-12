@@ -62,6 +62,8 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
 
     void Won()
     {
+        FinishLine.Instance.PlayWonParticles();
+
         won = true;
 
         CameraController.Instance.ignoreFollowing = true;

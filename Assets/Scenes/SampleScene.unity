@@ -16877,6 +16877,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9217211789787338729, guid: f4c66a9020bfc1142819a05b8fc1ec00,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4c66a9020bfc1142819a05b8fc1ec00, type: 3}
 --- !u!1001 &672817662
@@ -43607,8 +43612,8 @@ MonoBehaviour:
   - healthChange: 0.1
     healthSprite: {fileID: 21300000, guid: ef3d61f5fc11ee249800ca411a35da01, type: 3}
     wealthSprite: {fileID: 21300000, guid: 53d57ec2c26369c4db0aec6a469f2da8, type: 3}
-    healthText: Play
-    wealthText: Study
+    healthText: Buy expensive watch
+    wealthText: Work hard
 --- !u!4 &1838103368
 Transform:
   m_ObjectHideFlags: 0
