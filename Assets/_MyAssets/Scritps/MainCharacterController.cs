@@ -11,6 +11,8 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
     [SerializeField] float collectMoneyDistance = 1;
     [SerializeField] float moveSpeed = 5;
     [SerializeField] float groundWidth = 4.5f;
+    
+    public CollectablesStack collectablesStack;
 
     Vector3 updatedPosition;
     float lastXPos, currentXPos, deltaX;
@@ -18,6 +20,14 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
     public bool GameStarted { get; set; }
 
     bool died;
+
+    private void Awake()
+    {
+        if (collectablesStack == null)
+        {
+            collectablesStack = GetComponent<CollectablesStack>();
+        }
+    }
 
     void Start()
     {
@@ -30,7 +40,7 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
             var checkDelay = new WaitForSeconds(.1f);
             Collider[] colliders;
 
-            while (true)
+            while (!died)
             {
                 colliders = Physics.OverlapSphere(transform.position, collectMoneyDistance);
 
@@ -38,7 +48,9 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
                 {
                     if (item.CompareTag("Money"))
                     {
-                        Debug.Log("money found", item.gameObject);
+                        collectablesStack.AddToStack(item.gameObject);
+                        
+                        Destroy(item);
                     }
                 }
                 yield return checkDelay;
