@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using System;
 
 public class MainCharacterUI : MonoSingleton<MainCharacterUI>
 {
@@ -33,6 +34,11 @@ public class MainCharacterUI : MonoSingleton<MainCharacterUI>
 
         wealthSliderBackground.DOColor(Color.Lerp(lowColorBackground, highColorBackground, wealthSlider.value + valueToAdd), 1);
         wealthSliderFill.DOColor(Color.Lerp(lowColorFill, highColorFill, wealthSlider.value + valueToAdd), 1);
+    }
+
+    public void CharacterDied()
+    {
+        UiManager.Instance.EnableCanvas(2);
     }
 
     void UpdateSlider(Slider slider, float valueToAdd)

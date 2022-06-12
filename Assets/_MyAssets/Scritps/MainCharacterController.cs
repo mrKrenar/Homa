@@ -1,6 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
+public enum DeathReason { sadness, hunger}
 
 public class MainCharacterController : MonoSingleton<MainCharacterController>
 {
@@ -12,6 +16,8 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
     float lastXPos, currentXPos, deltaX;
 
     public bool GameStarted { get; set; }
+
+    bool died;
 
     void Start()
     {
@@ -40,8 +46,27 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
         }
     }
 
+    public void Die(DeathReason reason)
+    {
+        died = true;
+
+        CameraController.Instance.PlayerDied();
+
+        UiManager.Instance.SetDeathReason(reason);
+
+        transform.DOMove(new Vector3(0, 0, transform.position.z + 5), 1f).OnComplete(
+            () => {
+                CharacterAnimationController.Instance.SetAnimation(CharacterAnimationType.die);
+            });
+    }
+
     private void Update()
     {
+        if (died)
+        {
+            return;
+        }
+
         //when stop touching, make sure: deltaX = 0 and character stops moving on X
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
@@ -80,7 +105,7 @@ public class MainCharacterController : MonoSingleton<MainCharacterController>
 
     private void FixedUpdate()
     {
-        if (!GameStarted)
+        if (!GameStarted || died)
         {
             return;
         }

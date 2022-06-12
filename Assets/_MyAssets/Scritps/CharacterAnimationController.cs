@@ -40,8 +40,17 @@ public class CharacterAnimationController : MonoSingleton<CharacterAnimationCont
                 animator.SetBool("bo_running", false);
                 animator.SetInteger("int_randomDance", Random.Range(0, 4));
                 break;
+            case CharacterAnimationType.die:
+                animator.SetTrigger("tr_die");
+                break;
         }
+    }
+
+    //Don't delete. This method is triggered from an event in die animation
+    public void Died()
+    {
+        MainCharacterUI.Instance.CharacterDied();
     }
 }
 
-public enum CharacterAnimationType { idle, running, jumpUp, jumpDown, randomDance }
+public enum CharacterAnimationType { idle, running, jumpUp, jumpDown, randomDance, die }
