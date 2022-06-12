@@ -6,6 +6,7 @@ public class GameController : MonoSingleton<GameController>
 {
     [SerializeField] Portal portalPrefab;
     [SerializeField] Sprite testSprite;
+    [SerializeField] float finishDistance = 100;
 
     [SerializeField] GameObject fpsCounterWindow;
 
@@ -36,6 +37,8 @@ public class GameController : MonoSingleton<GameController>
     // Start is called before the first frame update
     void Start()
     {
+        UiManager.Instance.SetLevelText(PlayerPrefs.GetInt("CurrentLevel", 1));
+
         for (int i = 0; i < 10; i++)
         {
             Instantiate(portalPrefab, Vector3.forward * i * 10, Quaternion.identity).Setup(
@@ -44,6 +47,11 @@ public class GameController : MonoSingleton<GameController>
                 null, testSprite,
                 "party", "");
         }
+    }
+
+    private void Update()
+    {
+        UiManager.Instance.SetLevelProgressSlider(MainCharacterController.Instance.transform.position.z / finishDistance);
     }
 
     public void ToggleFpsCounterWindow()

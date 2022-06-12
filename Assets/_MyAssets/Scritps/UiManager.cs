@@ -1,10 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UiManager : MonoSingleton<UiManager>
 {
     [SerializeField] GameObject tutorialCanvas, playingCanvas, finishedCanvas;
+    [SerializeField] Slider gameProgress;
+    [SerializeField] TextMeshProUGUI thisLevelText, nextLevelText;
 
     /// <summary>
     /// 
@@ -31,5 +36,16 @@ public class UiManager : MonoSingleton<UiManager>
                 finishedCanvas.SetActive(true);
                 break;
         }
+    }
+
+    public void SetLevelProgressSlider(float newVal)
+    {
+        gameProgress.value = newVal;
+    }
+
+    public void SetLevelText(int currentLevel)
+    {
+        thisLevelText.text = currentLevel.ToString();
+        nextLevelText.text = (currentLevel + 1).ToString();
     }
 }
