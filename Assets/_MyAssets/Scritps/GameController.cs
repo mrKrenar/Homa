@@ -81,7 +81,7 @@ public class GameController : MonoSingleton<GameController>
 
         PortalData tmp;
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 2; i < 10; i++)
         {
             tmp = portalChoices[Random.Range(0, portalChoices.Length)];
 

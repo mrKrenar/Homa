@@ -33,7 +33,7 @@ public class CharacterAnimationController : MonoSingleton<CharacterAnimationCont
                 break;
             case CharacterAnimationType.randomDance:
                 animator.SetBool("bo_running", false);
-                animator.SetInteger("int_randomDance", Random.Range(0, 4));
+                animator.SetInteger("int_randomDance", Random.Range(0, 3));
                 break;
             case CharacterAnimationType.die:
                 animator.SetTrigger("tr_die");
