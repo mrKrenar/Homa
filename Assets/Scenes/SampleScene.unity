@@ -43555,19 +43555,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalPrefab: {fileID: 7575073708785329225, guid: 7c96d4cebd34f064fa8820722d23fc5a,
     type: 3}
-  testSprite: {fileID: 21300000, guid: 8206854b87b79b345beae1a524438c03, type: 3}
   finishDistance: 100
   fpsCounterWindow: {fileID: 1599324289}
   moneyLevelStart: {fileID: 1813540897}
   portalChoices:
   - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: 4779c7a89480c1e4f94cd10a20884bb8, type: 3}
+    wealthSprite: {fileID: 21300000, guid: a11e5e1269ae07847927f91519c315ff, type: 3}
+    healthText: Chill out
+    wealthText: Make a team
+  - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: 692189d7b2f64114dafad1d500cda8b1, type: 3}
+    wealthSprite: {fileID: 21300000, guid: c41611e16baaf9449a7eefbf13d073c7, type: 3}
+    healthText: Expensive ring
+    wealthText: Invest money
+  - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: 94db9a9786730a24f8e73e575642394b, type: 3}
+    wealthSprite: {fileID: 21300000, guid: 32532b55ea86c6647bd29e969404101e, type: 3}
+    healthText: Expensive food
+    wealthText: Learn new things
+  - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: df5336e00d9262e499fe7f12e9de422a, type: 3}
+    wealthSprite: {fileID: 21300000, guid: a5fac8028e1b6324bacd7408888913bc, type: 3}
+    healthText: Expensive necklace
+    wealthText: Save money
+  - healthChange: 0.1
     healthSprite: {fileID: 21300000, guid: 5f0bace0ed95b1d4dbd98ef65e900858, type: 3}
-    wealthSprite: {fileID: 21300000, guid: 53d57ec2c26369c4db0aec6a469f2da8, type: 3}
+    wealthSprite: {fileID: 21300000, guid: 04ddf7f54700c244294feb7ba94635b1, type: 3}
     healthText: Party
-    wealthText: Work
+    wealthText: Open shop
   - healthChange: 0.1
     healthSprite: {fileID: 21300000, guid: 54ab304b9207cd44f98ddab009016817, type: 3}
     wealthSprite: {fileID: 21300000, guid: 40767ea8d1bfe8b458e5b0017517d8ba, type: 3}
+    healthText: Play games
+    wealthText: Study
+  - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: db04b1de476f4e54898d6b019df4c9af, type: 3}
+    wealthSprite: {fileID: 21300000, guid: 45288d8d8a59a0342af85d61d418859a, type: 3}
+    healthText: Buy smartphone
+    wealthText: Work as uber
+  - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: 26622aacec614bb488e16853636f9f10, type: 3}
+    wealthSprite: {fileID: 21300000, guid: f6f1e56c1e733344b987275e5837190d, type: 3}
+    healthText: Newest car
+    wealthText: Work as teacher
+  - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: c8c517729d16004488694ea631d074bd, type: 3}
+    wealthSprite: {fileID: 21300000, guid: a303207220cae574e9694be8e9742f3f, type: 3}
+    healthText: Go on vacations
+    wealthText: Work as waiter
+  - healthChange: 0.1
+    healthSprite: {fileID: 21300000, guid: ef3d61f5fc11ee249800ca411a35da01, type: 3}
+    wealthSprite: {fileID: 21300000, guid: 53d57ec2c26369c4db0aec6a469f2da8, type: 3}
     healthText: Play
     wealthText: Study
 --- !u!4 &1838103368

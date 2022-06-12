@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoSingleton<GameController>
 {
     [SerializeField] Portal portalPrefab;
-    [SerializeField] Sprite testSprite;
     [SerializeField] float finishDistance = 100;
 
     [SerializeField] GameObject fpsCounterWindow;
