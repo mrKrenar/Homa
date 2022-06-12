@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using DG.Tweening;
 
 public class Portal : MonoBehaviour
 {
@@ -20,11 +21,17 @@ public class Portal : MonoBehaviour
         option0.onTriggerEnter += _ => {
             option0.ignoreTrigger = true;
             option1.ignoreTrigger = true;
+
+            option0Img.transform.DOScale(1.5f, .5f).SetEase(Ease.OutQuad);
+            option0Img.DOFade(0, .2f).SetDelay(.3f);
         };
 
         option1.onTriggerEnter += _ => {
             option0.ignoreTrigger = true;
             option1.ignoreTrigger = true;
+
+            option1Img.transform.DOScale(1.5f, .5f).SetEase(Ease.OutQuad);
+            option1Img.DOFade(0, .2f).SetDelay(.3f);
         };
 
     }

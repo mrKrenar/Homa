@@ -23,17 +23,33 @@ public class CollectablesStack : MonoBehaviour
         lastElementYPostion += distanceBetweenElements;
     }
 
-    public void ThrowFromStack()
+    public void ThrowFromStack(int amount)
     {
-        if (stack.Count > 0)
-        {
-            var element = stack[stack.Count - 1];
-            element.AddComponent<Rigidbody>().AddForce(Random.Range(-3f, 3f), Random.Range(5f, 7f), 0, ForceMode.VelocityChange);
-            element.transform.parent = null;
-            Destroy(element, 5f);
-            stack.RemoveAt(stack.Count - 1);
+        StartCoroutine(ThrowFromStack());
 
-            lastElementYPostion -= distanceBetweenElements;
+        IEnumerator ThrowFromStack()
+        {
+            var delay = new WaitForSeconds(.1f);
+
+            for (int i = 0; i < amount; i++)
+            {
+                if (stack.Count > 0)
+                {
+                    var element = stack[stack.Count - 1];
+                    element.AddComponent<Rigidbody>().AddForce(Random.Range(-3f, 3f), Random.Range(5f, 7f), 0, ForceMode.VelocityChange);
+                    element.transform.parent = null;
+                    Destroy(element, 5f);
+                    stack.RemoveAt(stack.Count - 1);
+
+                    lastElementYPostion -= distanceBetweenElements;
+                }
+                else
+                {
+                    break;
+                }
+
+                yield return delay;
+            }
         }
     }
 
