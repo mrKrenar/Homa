@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Others
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: ae49f5e7fe2b85b46873017826c2fb24, type: 3}
+    - {fileID: 2800000, guid: 5df6c1c4b3f5165469d246bfb6e1d408, type: 3}
+    - {fileID: 2800000, guid: 09736881d296f7b4085de33bb375ffad, type: 3}
+    - {fileID: 2800000, guid: efb07fc73022a5c4d946c6143aa699ae, type: 3}
+    - {fileID: 2800000, guid: 7f8b6a26018b8eb44a2e69b8ddcc9759, type: 3}
+    - {fileID: 2800000, guid: a6d69446d530c02479810fa3c25f7009, type: 3}
+    - {fileID: 2800000, guid: 8327a846de4d1fd44b82b8c1d4d62285, type: 3}
+    - {fileID: 2800000, guid: f7616cf2c8c48e74da296ff097d2e9ad, type: 3}
+    - {fileID: 2800000, guid: 0e3c0a2e6435f0b43b35b327987494a1, type: 3}
+    - {fileID: 2800000, guid: 2e187bf58a1ad284781c4c4652ae1011, type: 3}
+    - {fileID: 2800000, guid: ce55760eb29deb94fa83f6ef71230afe, type: 3}
+    - {fileID: 2800000, guid: f25226d8184b14d40b9d6381698916b4, type: 3}
+    - {fileID: 2800000, guid: b97f96961090bdf46806ca919b9c283b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 09736881d296f7b4085de33bb375ffad, type: 3}
+  - {fileID: 21300000, guid: f7616cf2c8c48e74da296ff097d2e9ad, type: 3}
+  - {fileID: 21300000, guid: 5df6c1c4b3f5165469d246bfb6e1d408, type: 3}
+  - {fileID: 21300000, guid: 2e187bf58a1ad284781c4c4652ae1011, type: 3}
+  - {fileID: 21300000, guid: 7f8b6a26018b8eb44a2e69b8ddcc9759, type: 3}
+  - {fileID: 21300000, guid: a6d69446d530c02479810fa3c25f7009, type: 3}
+  - {fileID: 21300000, guid: 8327a846de4d1fd44b82b8c1d4d62285, type: 3}
+  - {fileID: 21300000, guid: b97f96961090bdf46806ca919b9c283b, type: 3}
+  - {fileID: 21300000, guid: ae49f5e7fe2b85b46873017826c2fb24, type: 3}
+  - {fileID: 21300000, guid: f25226d8184b14d40b9d6381698916b4, type: 3}
+  - {fileID: 21300000, guid: ce55760eb29deb94fa83f6ef71230afe, type: 3}
+  - {fileID: 21300000, guid: 0e3c0a2e6435f0b43b35b327987494a1, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - finish line
+  - square
+  - Dead
+  - circle
+  - next
+  - option
+  - retry
+  - tap
+  - congratulation
+  - performance
+  - double-arrow-horizontal
+  - water
+  m_RenderDataMap: {}
+  m_Tag: Others
+  m_IsVariant: 0
