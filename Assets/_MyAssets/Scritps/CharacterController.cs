@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class CharacterController : MonoSingleton<CharacterController>
 {
-    // Start is called before the first frame update
+    [SerializeField] float collectMoneyDistance = 1;
+
     void Start()
     {
-        
+        StartCoroutine(CheckCollectables());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator CheckCollectables()
     {
-        
+        var checkDelay = new WaitForSeconds(.1f);
+        Collider[] colliders;
+
+        while (true)
+        {
+            colliders = Physics.OverlapSphere(transform.position, collectMoneyDistance);
+
+            foreach (var item in colliders)
+            {
+                if (item.CompareTag("Money"))
+                {
+                    Debug.Log("money found", item.gameObject);
+                }
+            }
+            yield return checkDelay;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, collectMoneyDistance);
     }
 }

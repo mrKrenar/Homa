@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df07a17239e62e143a95af0630fe4a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectMoneyDistance: 1.5
 --- !u!1001 &6536452356732139796
 PrefabInstance:
   m_ObjectHideFlags: 0
