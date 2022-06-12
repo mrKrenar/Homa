@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoSingleton<CharacterController>
+public class MainCharacterController : MonoSingleton<MainCharacterController>
 {
     [SerializeField] float collectMoneyDistance = 1;
 
